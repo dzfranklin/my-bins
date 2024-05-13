@@ -1,0 +1,31 @@
+body {
+    margin: 3rem
+}
+
+.collections {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.collections > li {
+    margin: 0 0 2rem 0;
+    padding: 0;
+}
+
+.collections h2 {
+    font-size: 1rem;
+    font-weight: unset;
+}
+
+.collections ul li {
+    margin-bottom: 0.5rem;
+}
+
+.collections > li:first-child {
+    margin-bottom: 6rem;
+}
+
+.collections > li:first-child ul {
+    font-weight: bold;
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>My Bin Calendar</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<ol class="collections">
+    {{ range . }}
+      <li>
+        <h2>{{ .Date }}</h2>
+        <ul>
+            {{ range .Bins }}
+              <li>{{ . }}</li>
+            {{ end }}
+        </ul>
+      </li>
+    {{ end }}
+</ol>
+</body>
+</html>

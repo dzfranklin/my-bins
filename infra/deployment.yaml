@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: server
+  namespace: bins
+  labels:
+    app: server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: server
+  template:
+    metadata:
+      labels:
+        app: server
+      namespace: bins
+    spec:
+      containers:
+        - name: server
+          image: ghcr.io/dzfranklin/my-bins:v0.1
+          ports:
+              - containerPort: 8080
+                name: http
